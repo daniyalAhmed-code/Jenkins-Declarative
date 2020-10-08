@@ -3,6 +3,11 @@ pipeline {
     tools { nodejs 'nodejs' }
     stages {
         stage('build') {
+             stage('fetch_latest_code') {
+        steps {
+          git url: 'https://github.com/daniyalAhmed-code/Jenkins-Declarative/tree/develop'
+        }
+      }
             steps {
                  checkout scm
                 sh 'pwd'
