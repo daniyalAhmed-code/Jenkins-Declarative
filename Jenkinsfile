@@ -1,6 +1,6 @@
 pipeline {
     agent {label 'ssh-slave'}
-    tools { nodejs "nodejs" }
+    tools { nodejs 'nodejs' }
     stages {
         stage('build') {
             steps {
