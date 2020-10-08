@@ -1,6 +1,6 @@
 pipeline {
     agent {label 'fleet-slave'}
-    {
+   tools {
 	nodejs 'nodejs' 
 }
     stages {
