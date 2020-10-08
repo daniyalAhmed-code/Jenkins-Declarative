@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'ssh-slave'}
+    agent {label 'fleet-slave'}
     tools { nodejs 'nodejs' }
     stages {
         
