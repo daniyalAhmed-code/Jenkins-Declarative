@@ -1,6 +1,8 @@
 pipeline {
     agent {label 'fleet-slave'}
-    tools { nodejs 'nodejs' }
+    {
+	nodejs 'nodejs' 
+}
     stages {
         
         stage('build') {
@@ -8,6 +10,7 @@ pipeline {
             steps {
                  checkout scm
                 sh 'pwd'
+                sh 'node -v'
                 echo GIT_BRANCH
                script {
                     if(env.GIT_BRANCH == "origin/main") {
