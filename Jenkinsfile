@@ -2,12 +2,13 @@ pipeline {
     agent {label 'ssh-slave'}
     tools { nodejs 'nodejs' }
     stages {
-        stage('build') {
-             stage('fetch_latest_code') {
+           stage('fetch_latest_code') {
         steps {
           git url: 'https://github.com/daniyalAhmed-code/Jenkins-Declarative/tree/develop'
         }
       }
+        stage('build') {
+          
             steps {
                  checkout scm
                 sh 'pwd'
